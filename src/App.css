@@ -1,42 +1,69 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* 
+
+    #F15A25 -- orange
+    #088D44 -- green
+
+*/
+
+.about_us{
+  position: relative;
+  width: 150px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about_us::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 5px;
+  background: #F15A25;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.impact_parent{
+  height: 300px;
+  transition: height 0.2s ease;
 }
 
-.card {
-  padding: 2em;
+.impact_parent:hover{
+  height: 330px;
 }
 
-.read-the-docs {
-  color: #888;
+.impact_parent:hover .impact_image{
+  transform: scale(1.1);
+}
+
+.impact_child{
+  position: absolute;
+  transform: translateY(-130%);
+  transition: transform 0.2s ease;
+  visibility: hidden;
+}
+
+.impact_parent:hover .impact_child{
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.get_involved{
+  position: relative;
+}
+
+.get_involved::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-30%);
+  width: 18%;
+  height: 5px;
+  background: #F15A25;
 }
