@@ -25,7 +25,7 @@ const SwiperSection = () => {
           disableOnInteraction: false,
         }}
         loop={true}
-        navigation={true}
+        // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper w-full flex flex-col items-center justify-center bg-[#088D44]"
       >
